@@ -74,8 +74,8 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_caps = ""
   holiday_hash.each do |key, value|
     holiday_caps = key.to_s
-    holiday_caps.split(_)
-    holiday_caps.capitalize!
+    holiday_caps.split("_") if holiday_caps.include?("_")
+    holiday_caps.capitalize!.join(" ")
     puts "#{holiday_caps}:"
       value.each do |key, value|
 
