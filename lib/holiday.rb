@@ -75,7 +75,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{key.to_s}:"
       value.each do |key, value|
           puts "/t#{key.to_s}:/n"
-          puts "/t#{value.join(, )}"
+          puts "/t#{value.join(", ")}"
       end
     end
 
